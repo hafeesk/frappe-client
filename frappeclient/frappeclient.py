@@ -5,7 +5,7 @@ import json
 try:
 	from StringIO import StringIO
 except:
-	from IO import StringIO
+	from io import StringIO
 
 try:
     unicode
@@ -127,7 +127,7 @@ class FrappeClient(object):
 			"cmd": "frappe.client.submit",
 			"doclist": json.dumps(doclist)
 		})
-	
+
 	def insert_comment(self, doc):
 		return self.post_request({
 			"cmd": "frappe.desk.form.utils.add_comment",
